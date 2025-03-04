@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Башкы бет</title>
+</head>
+<body>
+<h3>Категория тизмелери</h3>
+<ul>
+    {% for category in categories %}
+        <li style="background: #f6f6f6; padding: 1rem; width: 250px; float: left; margin: 0 10px">
+            <img src="{{ category.image }}" width="100%" alt="">
+
+            <h3>
+                <a href="/category/{{ category.id }}">
+                    {{ category.name }}
+                </a>
+            </h3>
+            <div style="width: 100%">{{ category.description }}</div>
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
